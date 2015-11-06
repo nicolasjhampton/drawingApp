@@ -67,7 +67,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 12, ../sass/_page.scss */
+/* line 3, ../sass/_page.scss */
 body {
   display: -webkit-flex;
   display: flex;
@@ -77,94 +77,99 @@ body {
   justify-content: space-around;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-flex: 1;
+  flex: 1;
+  width: 100%;
   height: 600px;
 }
-/* line 18, ../sass/_page.scss */
+/* line 6, ../sass/_page.scss */
 body > div {
   display: -webkit-flex;
   display: flex;
-  margin-top: 20px;
-  border-radius: 8px;
-}
-
-/* line 25, ../sass/_page.scss */
-body {
-  background: #828282;
-}
-
-/* line 29, ../sass/_page.scss */
-#canvas {
-  -webkit-align-self: stretch;
-  align-self: stretch;
-  flex: 5;
-  margin-right: 20px;
-  margin-left: 20px;
-  background: white;
-}
-
-/* line 37, ../sass/_page.scss */
-#palette {
-  -webkit-flex-direction: row;
-  flex-direction: row;
+  -webkit-flex-direction: column;
+  flex-direction: column;
   -webkit-justify-content: space-around;
   justify-content: space-around;
   -webkit-align-items: center;
   align-items: center;
+  -webkit-flex: 1;
   flex: 1;
+  margin: 20px 20px 0 20px;
+  border-radius: 8px;
+}
+
+/* line 13, ../sass/_page.scss */
+body {
+  background: #828282;
+}
+
+/* line 17, ../sass/_page.scss */
+#canvas {
+  -webkit-align-self: stretch;
+  align-self: stretch;
+  flex: 5;
+  background: white;
+}
+
+/* line 23, ../sass/_page.scss */
+#palette {
+  -webkit-flex-direction: row;
+  flex-direction: row;
   width: 50%;
+  height: 100%;
   background: #cfcfcf;
 }
-/* line 45, ../sass/_page.scss */
+/* line 28, ../sass/_page.scss */
 #palette > .color {
   width: 50px;
   height: 50px;
   border-radius: 100%;
 }
-/* line 51, ../sass/_page.scss */
+/* line 32, ../sass/_page.scss */
 #palette #red {
   background: red;
 }
-/* line 3, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #palette #red.selected {
   border: solid 5px white;
 }
-/* line 6, ../sass/_mixins.scss */
+/* line 24, ../sass/_mixins.scss */
 #palette #red:not(.selected) {
   border: solid 5px transparent;
 }
-/* line 9, ../sass/_mixins.scss */
+/* line 27, ../sass/_mixins.scss */
 #palette #red:hover {
   border: solid 5px #cc0000;
 }
-/* line 54, ../sass/_page.scss */
+/* line 35, ../sass/_page.scss */
 #palette #green {
   background: lime;
 }
-/* line 3, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #palette #green.selected {
   border: solid 5px white;
 }
-/* line 6, ../sass/_mixins.scss */
+/* line 24, ../sass/_mixins.scss */
 #palette #green:not(.selected) {
   border: solid 5px transparent;
 }
-/* line 9, ../sass/_mixins.scss */
+/* line 27, ../sass/_mixins.scss */
 #palette #green:hover {
   border: solid 5px #00cc00;
 }
-/* line 57, ../sass/_page.scss */
+/* line 38, ../sass/_page.scss */
 #palette #blue {
   background: blue;
 }
-/* line 3, ../sass/_mixins.scss */
+/* line 21, ../sass/_mixins.scss */
 #palette #blue.selected {
   border: solid 5px white;
 }
-/* line 6, ../sass/_mixins.scss */
+/* line 24, ../sass/_mixins.scss */
 #palette #blue:not(.selected) {
   border: solid 5px transparent;
 }
-/* line 9, ../sass/_mixins.scss */
+/* line 27, ../sass/_mixins.scss */
 #palette #blue:hover {
   border: solid 5px #0000cc;
 }
