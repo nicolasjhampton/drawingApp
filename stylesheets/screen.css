@@ -119,57 +119,96 @@ body {
   height: 100%;
   background: #cfcfcf;
 }
-/* line 28, ../sass/_page.scss */
-#palette > .color {
+/* line 25, ../sass/_mixins.scss */
+#palette .red > label {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1;
+  flex: 1;
   width: 50px;
   height: 50px;
   border-radius: 100%;
-}
-/* line 32, ../sass/_page.scss */
-#palette #red {
   background: red;
-}
-/* line 21, ../sass/_mixins.scss */
-#palette #red.selected {
-  border: solid 5px white;
-}
-/* line 24, ../sass/_mixins.scss */
-#palette #red:not(.selected) {
   border: solid 5px transparent;
 }
-/* line 27, ../sass/_mixins.scss */
-#palette #red:hover {
+/* line 32, ../sass/_mixins.scss */
+#palette .red > label:hover {
   border: solid 5px #cc0000;
 }
-/* line 35, ../sass/_page.scss */
-#palette #green {
-  background: lime;
+/* line 38, ../sass/_mixins.scss */
+#palette .red > input {
+  opacity: 0;
+  position: absolute;
 }
-/* line 21, ../sass/_mixins.scss */
-#palette #green.selected {
+/* line 43, ../sass/_mixins.scss */
+#palette .red > input:checked ~ label {
   border: solid 5px white;
 }
-/* line 24, ../sass/_mixins.scss */
-#palette #green:not(.selected) {
+/* line 25, ../sass/_mixins.scss */
+#palette .green > label {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1;
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: lime;
   border: solid 5px transparent;
 }
-/* line 27, ../sass/_mixins.scss */
-#palette #green:hover {
+/* line 32, ../sass/_mixins.scss */
+#palette .green > label:hover {
   border: solid 5px #00cc00;
 }
-/* line 38, ../sass/_page.scss */
-#palette #blue {
-  background: blue;
+/* line 38, ../sass/_mixins.scss */
+#palette .green > input {
+  opacity: 0;
+  position: absolute;
 }
-/* line 21, ../sass/_mixins.scss */
-#palette #blue.selected {
+/* line 43, ../sass/_mixins.scss */
+#palette .green > input:checked ~ label {
   border: solid 5px white;
 }
-/* line 24, ../sass/_mixins.scss */
-#palette #blue:not(.selected) {
+/* line 25, ../sass/_mixins.scss */
+#palette .blue > label {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex: 1;
+  flex: 1;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: blue;
   border: solid 5px transparent;
 }
-/* line 27, ../sass/_mixins.scss */
-#palette #blue:hover {
+/* line 32, ../sass/_mixins.scss */
+#palette .blue > label:hover {
   border: solid 5px #0000cc;
+}
+/* line 38, ../sass/_mixins.scss */
+#palette .blue > input {
+  opacity: 0;
+  position: absolute;
+}
+/* line 43, ../sass/_mixins.scss */
+#palette .blue > input:checked ~ label {
+  border: solid 5px white;
 }

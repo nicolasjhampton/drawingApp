@@ -1,11 +1,15 @@
 @mixin size($width:100%, $height:100%) {
+
   width:$width;
   height:$height;
+  
 }
 
 @mixin circle($diameter) {
+
   @include size($diameter, $diameter);
   border-radius: 100%;
+
 }
 
 @mixin flex-container($direction:column, $justify:space-around, $align:center) {
@@ -16,15 +20,28 @@
   @include flex(1);
 }
 
-@mixin button($color) {
-  background: $color;
-  &.selected {
+@mixin circle-toggle-btn($color, $size) {
+
+  > label {
+
+    @include flex-container();
+    @include circle($size);
+    background: $color;
+    border: solid 5px transparent;
+
+    &:hover {
+      border: solid 5px darken($color, 10%);
+    }
+
+  }
+
+  > input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  > input:checked ~ label {
     border: solid 5px white;
   }
-  &:not(.selected) {
-    border: solid 5px transparent;
-  }
-  &:hover {
-    border: solid 5px darken($color, 10%);
-  }
+
 }

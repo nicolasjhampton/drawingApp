@@ -25,17 +25,13 @@ body {
   @include size(50%);
   background: $palette-bg;
 
-  > .color {
-    @include circle($size-button);
+  .red {
+    @include circle-toggle-btn($red, $size-button);
   }
-
-  #red {
-    @include button($red);
+  .green {
+    @include circle-toggle-btn($green, $size-button);
   }
-  #green {
-    @include button($green);
-  }
-  #blue {
-    @include button($blue);
+  .blue {
+    @include circle-toggle-btn($blue, $size-button);
   }
 }
