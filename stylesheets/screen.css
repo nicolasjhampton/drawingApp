@@ -1,0 +1,170 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, ../sass/_page.scss */
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 600px;
+}
+/* line 18, ../sass/_page.scss */
+body > div {
+  display: -webkit-flex;
+  display: flex;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+/* line 25, ../sass/_page.scss */
+body {
+  background: #828282;
+}
+
+/* line 29, ../sass/_page.scss */
+#canvas {
+  -webkit-align-self: stretch;
+  align-self: stretch;
+  flex: 5;
+  margin-right: 20px;
+  margin-left: 20px;
+  background: white;
+}
+
+/* line 37, ../sass/_page.scss */
+#palette {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  flex: 1;
+  width: 50%;
+  background: #cfcfcf;
+}
+/* line 45, ../sass/_page.scss */
+#palette > .color {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+/* line 51, ../sass/_page.scss */
+#palette #red {
+  background: red;
+}
+/* line 3, ../sass/_mixins.scss */
+#palette #red.selected {
+  border: solid 5px white;
+}
+/* line 6, ../sass/_mixins.scss */
+#palette #red:not(.selected) {
+  border: solid 5px transparent;
+}
+/* line 9, ../sass/_mixins.scss */
+#palette #red:hover {
+  border: solid 5px #cc0000;
+}
+/* line 54, ../sass/_page.scss */
+#palette #green {
+  background: lime;
+}
+/* line 3, ../sass/_mixins.scss */
+#palette #green.selected {
+  border: solid 5px white;
+}
+/* line 6, ../sass/_mixins.scss */
+#palette #green:not(.selected) {
+  border: solid 5px transparent;
+}
+/* line 9, ../sass/_mixins.scss */
+#palette #green:hover {
+  border: solid 5px #00cc00;
+}
+/* line 57, ../sass/_page.scss */
+#palette #blue {
+  background: blue;
+}
+/* line 3, ../sass/_mixins.scss */
+#palette #blue.selected {
+  border: solid 5px white;
+}
+/* line 6, ../sass/_mixins.scss */
+#palette #blue:not(.selected) {
+  border: solid 5px transparent;
+}
+/* line 9, ../sass/_mixins.scss */
+#palette #blue:hover {
+  border: solid 5px #0000cc;
+}
