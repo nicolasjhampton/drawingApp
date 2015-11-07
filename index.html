@@ -12,18 +12,18 @@
 
     <div id="palette">
       <div class="red">
-        <input name="color" id="red" type="radio"/>
+        <input name="color" id="red" type="radio" onchange="palette.storeColor('red')"/>
         <label for="red"><div></div></label>
       </div>
       <div class="green">
-        <input name="color" id="green" type="radio"/>
+        <input name="color" id="green" type="radio" onchange="palette.storeColor('green')"/>
         <label for="green"><div></div></label>
       </div>
       <div class="blue">
-        <input name="color" id="blue" type="radio"/>
+        <input name="color" id="blue" type="radio" value="#" onchange="palette.storeColor('blue')"/>
         <label for="blue"><div></div></label>
       </div>
     </div>
-
+    <script src="js/app.js"></script>
   </body>
 </html>
