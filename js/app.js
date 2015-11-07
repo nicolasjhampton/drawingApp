@@ -1,32 +1,44 @@
+"use strict";
 
 var palette = (function(){
 
   return {
 
-    currentElement: null,
+    paletteInput: document.getElementsByName('color'),
 
-    colorValues: null,
+    currentColorValues: null,
 
-    storeColor: function(newColor) {
+    getCheckedRadioBox: function() {
+      for (var i = 0; i < this.paletteInput.length; ++i) {
+        if (this.paletteInput[i].checked === true) {
+          return this.paletteInput[i];
+        }
+      }
+    },
 
-      // Grab the input element that invokes this method
-      this.currentElement = document.getElementById(newColor).nextElementSibling;
-      console.log(document.getElementById(newColor));
+    getCurrentLabelStyles: function() {
+      var currentLabel = this.getCheckedRadioBox().nextElementSibling;
+      return window.getComputedStyle(currentLabel);
+    },
+
+    setColor: function() {
+
       // RegEx expression for RGB CSS values
       var re = /rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/;
-      // Get the bg color of the label associated with that input
-      var color = window.getComputedStyle(this.currentElement).backgroundColor;
-      // Split the bgcolor string
-      var match = re.exec(color);
+
+      // Get the CSS stylelist of the label associated with checked input
+      var elStyles = this.getCurrentLabelStyles();
+      // Split the bgcolor string for that element
+      var match = re.exec(elStyles.backgroundColor);
 
       // Reformat into pure number values, export as object
-      this.colorValues = {
+      this.currentColorValues = {
                           "red"  : match[1],
                           "green": match[2],
                           "blue" : match[3]
                         };
 
-      console.log(this.colorValues);
+      console.log(this.currentColorValues);
     }
 
   }
