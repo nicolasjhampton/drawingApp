@@ -11,7 +11,7 @@ var palette = (function(){
 
       // Grab the input element that invokes this method
       this.currentElement = document.getElementById(newColor).nextElementSibling;
-
+      console.log(document.getElementById(newColor));
       // RegEx expression for RGB CSS values
       var re = /rgb\((\d{1,3}), (\d{1,3}), (\d{1,3})\)/;
       // Get the bg color of the label associated with that input
@@ -29,6 +29,14 @@ var palette = (function(){
       console.log(this.colorValues);
     }
 
+  }
+
+}());
+
+var canvas = (function() {
+
+  return {
+    context: document.getElementsByTagName("canvas")[0].getContext("2d")
   }
 
 }());
