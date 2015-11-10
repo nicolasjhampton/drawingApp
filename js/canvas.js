@@ -1,7 +1,7 @@
-var canvas = (function() {
+var canvas = (function(canvas) {
 
   return {
-    context: document.getElementsByTagName("canvas")[0].getContext("2d")
+    context: canvas.getContext("2d")
   }
 
-}());
+}(document.getElementsByTagName("canvas")[0]));

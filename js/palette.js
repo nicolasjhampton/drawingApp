@@ -1,34 +1,17 @@
-/* I need to fully understand the consquences of overwriting
-  __proto__ in this particular instance...*/
-
 "use strict";
 
 var Palette = (function(paletteInput) {
 
-  var palette = {
-    __proto__: {
-                getcolor: function() {
-                  return splitRGBValue(getStyles('backgroundColor'));
-                }
-            }
-  };
+  var selected;
 
-  var getSelectedElement = function() {
-      for (var i = 0; i < paletteInput.length; ++i) {
-        if (paletteInput[i].checked === true) {
-          return paletteInput[i].nextElementSibling;
-        }
-      }
-    }
+  for (var i = 0; i < paletteInput.length; i++) {
+    console.log(getStyles(paletteInput[i].nextElementSibling));
+    paletteInput[i].addEventListener('click', function() {
+      selected = window.getComputedStyle(this.nextElementSibling);
+    });
+  }
 
-  var getStyles = function(cssProperty) {
-      var el = getSelectedElement();
-      console.log(el);
-      var styleSheet = window.getComputedStyle(el);
-      return styleSheet[cssProperty];
-    }
-
-  var splitRGBValue = function(rgbValue) {
+  function splitRGBValue(rgbValue) {
 
       // RegEx expression for RGB CSS values
       var re = /rgb\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)\s*\)/;
@@ -45,6 +28,10 @@ var Palette = (function(paletteInput) {
 
     }
 
-  return palette;
+  return {
+    getColor: function () {
+      return splitRGBValue(selected.backgroundColor);
+    }
+  };
 
 }(document.getElementsByName('color')));
